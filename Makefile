@@ -36,11 +36,11 @@ test:
 	@echo There are no tests available for now. Skipping
 
 save-docker-cache: $(DOCKER_CACHE)
-	docker save $(IMAGE) $(shell docker history -q $(IMAGE) | tail -n +2 | grep -v \<missing\> | tr '\n' ' ') > $(DOCKER_CACHE)/image.tar
+	docker save $(IMAGE) $(shell docker history -q $(IMAGE) | tail -n +2 | grep -v \<missing\> | tr '\n' ' ') > $(DOCKER_CACHE)/image-$(ELASTICMQ_VERSION).tar
 	ls -lah $(DOCKER_CACHE)
 
 load-docker-cache: $(DOCKER_CACHE)
-	if [ -e $(DOCKER_CACHE)/image.tar ]; then docker load < $(DOCKER_CACHE)/image.tar; fi
+	if [ -e $(DOCKER_CACHE)/image-$(ELASTICMQ_VERSION).tar ]; then docker load < $(DOCKER_CACHE)/image-$(ELASTICMQ_VERSION).tar; fi
 
 $(DOCKER_CACHE):
 	mkdir -p $(DOCKER_CACHE)

@@ -3,6 +3,11 @@ sudo: required
 services:
   - docker
 
+env:
+  - ELASTICMQ_VERSION=0.7.1
+  - ELASTICMQ_VERSION=0.8.12
+  - ELASTICMQ_VERSION=0.9.3
+
 before_install:
   - make load-docker-cache
   - make build
