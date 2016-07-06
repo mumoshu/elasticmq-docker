@@ -12,7 +12,7 @@ include classpath("application.conf")
 node-address {
     protocol = http
     // this is specifically for docker
-    host = $BRIDGE
+    host = "$BRIDGE"
     port = 9324
     context-path = ""
 }
