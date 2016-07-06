@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 CONTAINER_ID=$(hostname)
 BRIDGE=$(cat /etc/hosts|grep $CONTAINER_ID|cut -s -f1)
