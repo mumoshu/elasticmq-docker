@@ -9,6 +9,7 @@ DOCKERFILE ?= $(BUILD_ROOT)/Dockerfile
 RUNFILE ?= $(BUILD_ROOT)/run
 DOCKER_CACHE ?= docker-cache
 
+.PHONY: build
 build: $(DOCKERFILE) $(RUNFILE)
 	cd $(BUILD_ROOT) && docker build -t $(IMAGE) . && docker tag $(IMAGE) $(ALIAS)
 
