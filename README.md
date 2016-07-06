@@ -1,5 +1,7 @@
 # ElasticMQ-Docker
 
+[![Build Status](https://travis-ci.org/mumoshu/elasticmq-docker.svg?branch=master)](https://travis-ci.org/mumoshu/elasticmq-docker)
+
 Alpine Linux based Containerized [ElasticMQ](https://github.com/adamw/elasticmq) forked from [behance/elasticmq-docker](https://github.com/behance/elasticmq-docker)
 Used for dev environments that [integrate with AWS SQS](http://labs.encoded.io/2013/02/03/testing-amazon-sqs-locally-with-elasticmq/)
 
